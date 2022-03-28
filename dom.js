@@ -1,4 +1,4 @@
-//module 18 lecture 5
+//module 18
 
 let heading = document.getElementsByTagName('h1');
 
@@ -30,3 +30,21 @@ for (let i = 0; i < specialPara.length; i++) {
     const element = specialPara[i];
     element.style.backgroundColor = 'lightblue';
 }
+
+document.getElementById('para').setAttribute('align', 'center');
+document.getElementById('para').setAttribute('title', 'Hello World');
+
+let newPara = document.createElement('p');
+newPara.innerHTML = 'this para created by JS';
+newPara.style.color = 'red';
+
+let firstHeading = document.querySelector('.box');
+firstHeading.appendChild(newPara);
+
+let newGift = document.createElement('li');
+newGift.innerHTML = 'Gift added by JS';
+newGift.color = 'red';
+
+let list = document.getElementById('gift-list');
+list.appendChild(newGift);
+
