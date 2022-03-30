@@ -43,7 +43,7 @@ firstHeading.appendChild(newPara);
 
 let newGift = document.createElement('li');
 newGift.innerHTML = 'Gift added by JS';
-newGift.color = 'red';
+newGift.style.color = 'red';
 
 let list = document.getElementById('gift-list');
 list.appendChild(newGift);
