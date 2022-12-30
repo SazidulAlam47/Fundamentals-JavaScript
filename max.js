@@ -6,5 +6,5 @@ let max = Math.max(a, b, c, d);
 console.log(max);
 
 let ary = [12, 30, 54, 45];
-let max2 = Math.max(...ary);
+let max2 = Math.max(...ary); 
 console.log(max2);

@@ -1,0 +1,10 @@
+let list = ['kalam', 'salam', 'balam', 'talam', 'palam'];
+let last = list.pop();
+console.log(last);
+console.log(list);
+list.push(2022);
+console.log(list);
+list.shift();
+console.log(list);
+list.unshift(2012);
+console.log(list);
