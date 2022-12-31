@@ -11,10 +11,9 @@ let total2 = Number(num1) + Number(num2);
 console.log(total2);
 
 num1 = +num1;
-num2 = +num1;
+num2 = +num2;
 
 console.log(`type of num1 is now "${typeof num1}" after +num1`);
 
 total3 = num1 + num2;  
-
 console.log(total3);
