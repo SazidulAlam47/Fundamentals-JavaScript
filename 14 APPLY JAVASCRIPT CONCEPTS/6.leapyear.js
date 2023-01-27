@@ -9,3 +9,6 @@ function isLeapYear(year) {
       return true;
     }
   }
+
+let year = isLeapYear(2022);
+console.log(year);
