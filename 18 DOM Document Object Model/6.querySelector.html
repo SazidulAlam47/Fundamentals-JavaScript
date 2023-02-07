@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 6</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            margin: 5px;
+            padding: 0 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <article class="nothing">
+        <h1>article-1</h1>
+        <p class="author">author-1</p>
+        <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, ex assumenda! Quasi ea itaque adipisci ut perferendis expedita. Maiores, amet.</p>
+    </article>
+    <article class="special nothing">
+        <h1>article-2</h1>
+        <p class="author">author-2</p>
+        <p class="content">Itaque dolores eligendi quam totam nobis culpa enim tempora reiciendis facilis velit, quod sequi corporis corrupti, maxime, aliquam molestias esse.</p>
+    </article>
+    <article>
+        <h1>article-3</h1>
+        <p class="author">author-3</p>
+        <p class="content">Voluptatibus doloribus ipsa magni laboriosam aliquam quidem nam et nobis fuga quasi accusamus, dolorem adipisci, blanditiis harum accusantium perferendis alias?</p>
+    </article>
+
+    <script>
+         let specialAuthor = document.querySelector('.special .author');
+         specialAuthor.style.color = 'red';
+         specialAuthor.style.fontSize = '20px';
+         specialAuthor.innerText = 'Special Lekhok';
+         let nothingArticles = document.querySelectorAll('.nothing .content');
+         for (let index = 0; index < nothingArticles.length; index++) {
+            const element = nothingArticles[index];
+            element.style.color = 'skyblue';
+         }
+         let firstNothingArticle = document.querySelector('.nothing .content');
+         firstNothingArticle.style.fontSize = '12px';
+    </script>
+</body>
+</html>
