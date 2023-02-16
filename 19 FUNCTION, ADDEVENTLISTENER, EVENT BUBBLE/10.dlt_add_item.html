@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble</title>
+    <style>
+        ul#list li#item{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>My list</h1>
+        <ul id="list">
+            <li id="first" class="item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+            <li class="item">Deleniti optio laudantium fugit a deserunt doloribus.</li>
+            <li class="item">Necessitatibus ullam quam atque consequuntur aspernatur! Temporibus.</li>
+            <li class="item">Distinctio, dolor officia. Excepturi dolor laborum modi?</li>
+            <li class="item">Molestias, consequuntur magni tempore eligendi nobis amet.</li>
+        </ul>
+        <button id="add-new">Add new item</button>
+    </div>
+    
+    <script>
+        // let items = document.getElementsByClassName('item');
+        // for (let i = 0; i < items.length; i++) {
+        //     const item = items[i];
+        //     item.addEventListener('click', function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+        let theList = document.getElementById('list');
+
+        theList.addEventListener('click', function(event){
+            this.removeChild(event.target);
+        })
+
+        document.getElementById('add-new').addEventListener('click', function(){
+            let nextItem = document.createElement('li');
+            nextItem.innerHTML = 'This is new item added by JS';
+            theList.appendChild(nextItem);
+        })
+    </script>
+</body>
+</html>

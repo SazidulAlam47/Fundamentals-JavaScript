@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bubble</title>
+    <style>
+        ul#list li#item{
+            color: red;
+        }
+    </style>
 </head>
 <body>
     
@@ -18,12 +23,18 @@
             <li class="item">Molestias, consequuntur magni tempore eligendi nobis amet.</li>
         </ul>
     </div>
-    <button id="new-item">Push new item</button>
-
-    <hr>
-
-    <img src="eventflow.svg" alt="event">
-
-    <script src="script.js"></script>
+    
+    <script>
+        document.getElementById('list').addEventListener('click', function(){
+            console.log('list clicked');
+        })
+        document.getElementById('container').addEventListener('click', function(){
+            console.log('container clicked');
+        })
+        document.getElementById('first').addEventListener('click', function(){
+            console.log('first item clicked');
+            event.stopPropagation();
+        })
+    </script>
 </body>
 </html>
