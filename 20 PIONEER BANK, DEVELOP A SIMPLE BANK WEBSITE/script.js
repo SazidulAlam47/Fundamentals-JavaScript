@@ -3,16 +3,16 @@ const loginBtn = document.getElementById('login');
 loginBtn.addEventListener('click', function(){
     const loginArea = document.getElementById('login-area');
     const transactionArea = document.getElementById('transaction-area');
-    const email = document.getElementById('email');
-    const pass = document.getElementById('pass');
-    if (email.value == 'admin' && pass.value == 'admin'){
+    const emailBox = document.getElementById('email');
+    const passwordBox = document.getElementById('password');
+    if (emailBox.value == 'admin' && passwordBox.value == 'admin'){
         loginArea.style.display = 'none';
         transactionArea.style.display = 'block';
     }
     else{
         document.getElementById('wrong-pass').style.display = 'block';
-        email.style.border = '1px solid red';
-        pass.style.border = '1px solid red';
+        emailBox.style.border = '1px solid red';
+        passwordBox.style.border = '1px solid red';
     }
 
 })
