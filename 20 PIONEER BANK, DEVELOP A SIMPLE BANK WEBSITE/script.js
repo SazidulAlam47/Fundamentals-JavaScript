@@ -39,7 +39,7 @@ function updateDollarValue(idName, inputDollar, updateDollarOperator) {
     document.getElementById(idName).innerText = currentDollar;
 }
 
-function updateDollarBox(btnId, amountId, currentBoxDollar, updateDollarOperator, theForm) {
+function updateTransaction(btnId, amountId, currentBoxDollar, updateDollarOperator, theForm) {
     const ClickBtn = document.getElementById(btnId);
     ClickBtn.addEventListener('click', function(){
         const transactionAmount = getNumber(amountId, 'input');
@@ -51,7 +51,7 @@ function updateDollarBox(btnId, amountId, currentBoxDollar, updateDollarOperator
     })
 }
 
-updateDollarBox('depositBtn', 'deposit-amount', 'current-deposit', 'addDollar', 'deposit-form');
-updateDollarBox('withdrawBtn', 'withdraw-amount', 'current-withdraw', 'subtractDollar', 'withdraw-form');
+updateTransaction('depositBtn', 'deposit-amount', 'current-deposit', 'addDollar', 'deposit-form');
+updateTransaction('withdrawBtn', 'withdraw-amount', 'current-withdraw', 'subtractDollar', 'withdraw-form');
 
  
