@@ -17,42 +17,41 @@ loginBtn.addEventListener('click', function(){
 
 })
 
-function getInputNumber(id){
-    const amount = document.getElementById(id).value;
-    const amountNumber = parseFloat(amount);
-    return amountNumber;
-}
-function getSpanNumber(id){
-    const amount = document.getElementById(id).innerText;
-    const amountNumber = parseFloat(amount);
-    return amountNumber;
+function getNumber(id, type){
+    let amount = null;
+    if(type == 'input'){
+        amount = document.getElementById(id).value;
+    }
+    else {
+        amount = document.getElementById(id).innerText;
+    }
+    return parseFloat(amount);
 }
 
-function updateDollarValue(idName, inputDollar, updateDollarFunction) {
-    let currentDollar = getSpanNumber(idName);
-    currentDollar = updateDollarFunction(currentDollar, inputDollar)
+function updateDollarValue(idName, inputDollar, updateDollarOperator) {
+    let currentDollar = getNumber(idName, 'span');
+    if(updateDollarOperator == 'addDollar'){
+        currentDollar += inputDollar;
+    }
+    else if(updateDollarOperator == 'subtractDollar'){
+        currentDollar -= inputDollar;
+    }
     document.getElementById(idName).innerText = currentDollar;
 }
-function addDollar(currentDollar, inputDollar) {
-    return currentDollar + inputDollar;
-}
-function subtractDollar(currentDollar, inputDollar) {
-    return currentDollar - inputDollar;
-}
 
-function updateDollarBox(btnId, amountId, currentBoxDollar, updateDollarFunction, theForm) {
+function updateDollarBox(btnId, amountId, currentBoxDollar, updateDollarOperator, theForm) {
     const ClickBtn = document.getElementById(btnId);
     ClickBtn.addEventListener('click', function(){
-        const transactionAmount = getInputNumber(amountId);
+        const transactionAmount = getNumber(amountId, 'input');
         
-        updateDollarValue(currentBoxDollar, transactionAmount, addDollar);
-        updateDollarValue('current-balance', transactionAmount, updateDollarFunction);
+        updateDollarValue(currentBoxDollar, transactionAmount, 'addDollar');
+        updateDollarValue('current-balance', transactionAmount, updateDollarOperator);
 
         document.getElementById(theForm).reset();
     })
 }
 
-updateDollarBox('depositBtn', 'deposit-amount', 'current-deposit', addDollar, 'deposit-form');
-updateDollarBox('withdrawBtn', 'withdraw-amount', 'current-withdraw', subtractDollar, 'withdraw-form');
+updateDollarBox('depositBtn', 'deposit-amount', 'current-deposit', 'addDollar', 'deposit-form');
+updateDollarBox('withdrawBtn', 'withdraw-amount', 'current-withdraw', 'subtractDollar', 'withdraw-form');
 
  
