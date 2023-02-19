@@ -39,12 +39,12 @@ function updateDollarValue(idName, inputDollar, updateDollarOperator) {
     document.getElementById(idName).innerText = currentDollar;
 }
 
-function updateTransaction(btnId, amountId, currentBoxDollar, updateDollarOperator, theForm) {
+function updateTransaction(btnId, amountId, currentDollar, updateDollarOperator, theForm) {
     const ClickBtn = document.getElementById(btnId);
     ClickBtn.addEventListener('click', function(){
         const transactionAmount = getNumber(amountId, 'input');
         
-        updateDollarValue(currentBoxDollar, transactionAmount, 'addDollar');
+        updateDollarValue(currentDollar, transactionAmount, 'addDollar');
         updateDollarValue('current-balance', transactionAmount, updateDollarOperator);
 
         document.getElementById(theForm).reset();
