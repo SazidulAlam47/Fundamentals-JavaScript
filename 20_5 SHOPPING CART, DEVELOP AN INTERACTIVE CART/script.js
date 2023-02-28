@@ -32,3 +32,5 @@ plusMinusCount('case-minus', 'case-count', 'minus', 'case-price', 59);
 
 plusMinusCount('phone-plus', 'phone-count', 'plus', 'phone-price', 1219);
 plusMinusCount('phone-minus', 'phone-count', 'minus', 'phone-price', 1219);
+
+//done
