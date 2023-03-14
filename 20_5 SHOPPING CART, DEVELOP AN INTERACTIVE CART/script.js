@@ -17,7 +17,7 @@ function plusMinusCount(product, isPlus, unitPrice){
         console.log(productPriceNumber);
         document.getElementById(product + '-price').innerText = productPriceNumber;
 
-        // update total price
+        // update total price 
         const phonePrice = document.getElementById('phone-price');
         const casePirice = document.getElementById('case-price');
         const subtotalPrice = document.getElementById('subtotal-price');
@@ -33,4 +33,3 @@ plusMinusCount('phone', false, 1219);
 
 plusMinusCount('case', true, 59);
 plusMinusCount('case', false, 59);
-//done
