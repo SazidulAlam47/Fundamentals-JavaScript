@@ -33,3 +33,8 @@ input{
     font-size: 12px;
     display: none;
 }
+#no-balance{
+    font-size: 13px;
+    color: red;
+    display: none;
+}

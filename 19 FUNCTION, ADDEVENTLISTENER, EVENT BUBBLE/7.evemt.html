@@ -14,6 +14,7 @@
         }
         #read-more{
             color: blue;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -45,9 +46,12 @@
     </article>
 
     <script>
-        let firstArticle = document.getElementById('first-article');
-        newPara.innerHTML = 'This is new paragraph pushed by JS';
-        newPara.style.color = 'skyblue';
+        let readMorePara = document.getElementById('read-more');
+        readMorePara.addEventListener("click", function(){
+            readMorePara.innerHTML = 'This is new paragraph pushed by JS';
+            readMorePara.style.color = 'skyblue';
+        })
+        
 
         //insert new item in list
         let giftList = document.querySelector('article ul');
@@ -59,6 +63,7 @@
         //parentNode
         let secondArticle = document.getElementById('second-author').parentNode;
         secondArticle.style.fontSize = '20px';
+        secondArticle.style.backgroundColor = 'skyblue';
     </script>
 </body>
 </html>

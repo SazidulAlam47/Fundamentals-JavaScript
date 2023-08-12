@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>জ্ঞানের বাত্তি</title>
+</head>
 <body>
 
-<h2>What Can JavaScript Do?</h2>
+<h2>জ্ঞানের বাত্তি</h2>
 
-<p>JavaScript can change HTML attribute values.</p>
+<audio id="battiOn" src="ganer-bati-jalo-re.mp3"></audio>
+<audio id="battiOff" src="bati-nibva-gese.mp3"></audio>
 
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
-
-<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+<button id="on-btn">Turn on the light</button>
 
 <img id="myImage" src="pic_bulboff.gif" style="width:100px">
 
-<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+<button id="off-btn">Turn off the light</button>
+
+<script>
+    const onBtn = document.getElementById('on-btn');
+    const offBtn = document.getElementById('off-btn');
+
+    const battiOnAudio = document.getElementById('battiOn');
+    const battiOffAudio = document.getElementById('battiOff');
+
+    onBtn.addEventListener("click", function(){
+        document.getElementById('myImage').src='pic_bulbon.gif';
+        battiOnAudio.play();
+    });
+    
+    offBtn.addEventListener("click", function(){
+        document.getElementById('myImage').src='pic_bulboff.gif';
+        battiOffAudio.play();
+    });
+    
+</script>
 
 </body>
 </html>

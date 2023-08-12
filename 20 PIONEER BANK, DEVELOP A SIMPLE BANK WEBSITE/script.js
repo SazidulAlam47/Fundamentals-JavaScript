@@ -36,16 +36,27 @@ function updateDollarValue(idName, inputDollar, updateDollarOperator) {
     else if(updateDollarOperator == 'subtractDollar'){
         currentDollar -= inputDollar;
     }
-    document.getElementById(idName).innerText = currentDollar;
+    if(currentDollar < 0){
+        document.getElementById('no-balance').style.display = 'block';
+        document.getElementById('withdraw-area').style.paddingBottom = '15px';
+    }
+    else{
+        document.getElementById(idName).innerText = currentDollar;
+    }
 }
 
 function updateTransaction(btnId, amountId, currentDollar, updateDollarOperator, theForm) {
     const ClickBtn = document.getElementById(btnId);
     ClickBtn.addEventListener('click', function(){
         const transactionAmount = getNumber(amountId, 'input');
+        const oldBalance = getNumber('current-balance');
         
-        updateDollarValue(currentDollar, transactionAmount, 'addDollar');
         updateDollarValue('current-balance', transactionAmount, updateDollarOperator);
+
+        const NewBalance = getNumber('current-balance');
+        if(oldBalance != NewBalance){
+            updateDollarValue(currentDollar, transactionAmount, 'addDollar');
+        }
 
         document.getElementById(theForm).reset();
     })

@@ -10,6 +10,6 @@ console.log(num1 + num2);
 
 let num3 = 0.1;
 let num4 = 0.2;
-let sum = num3 + num4
+let sum = num3 + num4;
 console.log(sum);
 console.log(sum.toFixed(2));
