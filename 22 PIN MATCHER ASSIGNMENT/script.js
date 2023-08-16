@@ -35,6 +35,10 @@ let submitIsPressed = false;
 
 allNumberBtn.addEventListener('click', function(event){
     let press = event.target.innerText;
+    console.log(event.target);
+    if (press.length > 1) {
+        return;
+    }
     if(submitIsPressed){
         inputDisplay.value = '';
         matchNotify.style.display = 'none';
