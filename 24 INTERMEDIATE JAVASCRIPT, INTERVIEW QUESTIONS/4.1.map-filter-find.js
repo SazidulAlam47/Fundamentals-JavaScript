@@ -25,13 +25,15 @@ console.log(result);
 
 // map and arrow function
 const result2 = numbers.map(x => x * x);
-
 console.log(result2);
 
 //filter
-const bigger = numbers.filter( x => x > 5);
+const bigger = numbers.filter( x => x > 5); //filter gives a array of all satisfied element
 console.log(bigger);
 
 //find
-const isThere = numbers.find(x => x > 5);
+const isThere = numbers.find(x => x > 5); //find give the first satisfied element
 console.log(isThere);
+
+//forEach
+//reduce
