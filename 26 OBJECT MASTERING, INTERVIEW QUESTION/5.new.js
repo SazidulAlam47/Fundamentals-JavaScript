@@ -12,3 +12,6 @@ console.log(heroPerson.salary);
 
 const normalPerson = new Person('Sogir', 'Uddin', 1500);
 console.log(normalPerson);
+
+//new keyword dia class theke object banabo
+//joto gula dorkar sobgulo banabo

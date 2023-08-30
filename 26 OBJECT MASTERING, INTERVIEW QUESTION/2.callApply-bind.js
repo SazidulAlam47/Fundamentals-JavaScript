@@ -21,4 +21,3 @@ const heroBillCharge = normalPerson.chargeBill.bind(heroPerson);
 heroBillCharge(500, 1000, 100);
 heroBillCharge(1500, 1500, 50);
 console.log(heroPerson.salary);
-

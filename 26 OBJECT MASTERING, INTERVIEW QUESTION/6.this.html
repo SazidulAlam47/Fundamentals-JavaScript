@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>this is confusion</h3>
+    <p onclick="this.innerText = 'you clicked me'">don't click me</p>
+
+<script>
+        
+    function add(a, b){
+        console.log(this);
+        return a + b;
+    }
+    let result = add(15, 14);
+    console.log(result);
+
+    const normalPerson = {
+        firstName: 'Rahim',
+        lastName: 'Uddin',
+        getFullName: function(){
+            console.log(this.firstName, this.lastName);
+        },
+    };
+
+    const heroPerson = {
+        firstName: 'Hero',
+        lastName: 'Balam',
+        salary: 50000,
+    };
+    
+    heroPerson.getFullName = normalPerson.getFullName;
+    heroPerson.getFullName();
+
+    heroPerson.sum = add;
+    const newName = heroPerson.sum(heroPerson.firstName, normalPerson.lastName);
+    console.log(newName);
+    
+</script>
+</body>
+</html>
