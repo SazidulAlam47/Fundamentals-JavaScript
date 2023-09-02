@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm</title>
+</head>
+<body>
+    <h1 id="content">You are a child. You can not watch this.</h1>
+    <button id="confirmation">Confirm your age</button>
+    </br> </br>
+    <img id="pic" src="pic.png" alt="18+ pic" style="display: none;">
+
+
+
+    <script>
+        confirmation.addEventListener('click', confirmAlert);
+
+        function confirmAlert(){
+            const age = prompt("What is you age?");
+            if (age >= 18) {
+                const sure = confirm("Are you sure?");
+                if (sure) {
+                    cngContent();
+                }
+            }
+            else{
+                alert('You are truly a child. Go and watch Doraemon.');
+            }
+        }
+
+        function cngContent(){
+            content.innerHTML = "You are adult you can watch this.";
+            pic.style.display = 'block';
+        }
+
+    </script>
+</body>
+</html>
