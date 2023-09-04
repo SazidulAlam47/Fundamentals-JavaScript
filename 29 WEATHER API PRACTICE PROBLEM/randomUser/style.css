@@ -45,6 +45,7 @@ body, html {
     border-radius: 5px; /* Add a slight border-radius */
     padding: 10px 20px; /* Padding inside the button */
     cursor: pointer; /* Add a pointer cursor on hover */
+    transition: 0.5s;
   }
   
   /* Style the submit button on hover */
@@ -57,11 +58,11 @@ body, html {
   .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 20px;
     max-width: 1200px;
     padding: 20px;
-  }
+}
   
   .card {
     background-color: #fff;
@@ -74,6 +75,9 @@ body, html {
     margin-bottom: 20px;
     box-sizing: border-box; /* Ensure padding doesn't affect width */
     transition: transform 0.3s ease-in-out;
+  }
+  .card:first-child{
+    min-width: 350px;
   }
   
   .card:hover {
@@ -96,6 +100,10 @@ body, html {
   p {
     margin: 5px 0;
   }
+  h2 + p{
+    margin-bottom: 15px;
+    color: #555;
+  }
   
   /* Modern style for the card content */
   .card .user-info {
@@ -104,7 +112,7 @@ body, html {
   
   .card .user-info p {
     font-size: 0.9rem;
-    color: #555;
+    color: #3f3f3f;
   }
   
   /* Media query for responsiveness */

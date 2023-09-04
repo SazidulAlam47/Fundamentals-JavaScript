@@ -20,14 +20,15 @@ function displayUsers(allUsers){
         <div class="user-info">
             <h2>${userName}</h2>
             <p>male</p>
-            <p><strong>Email:</strong>${user.email}</p>
-            <p><strong>Date of Birth:</strong>${user.dob.date}</p>
-            <p><strong>Age:</strong>${user.dob.age}</p>
-            <p><strong>Phone Number:</strong>${user.phone}</p>
-            <p><strong>Location:</strong>${userLocation}</p>
-            <p><strong>Time zone:</strong>GMT${user.location.timezone.offset} (${user.location.timezone.description})</p>
+            <p><strong>Email:</strong> ${user.email}</p>
+            <p><strong>Date of Birth:</strong> ${user.dob.date.split('T')[0]}</p>
+            <p><strong>Age:</strong> ${user.dob.age}</p>
+            <p><strong>Phone Number:</strong> ${user.phone}</p>
+            <p><strong>Location:</strong> ${userLocation}</p>
+            <p><strong>Time zone:</strong> GMT${user.location.timezone.offset} (${user.location.timezone.description})</p>
         </div>
         `;
+
         allUsersContainer.appendChild(newUser);
     });
 }
