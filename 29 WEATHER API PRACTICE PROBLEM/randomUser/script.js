@@ -24,7 +24,7 @@ function displayUsers(allUsers){
             <p><strong>Date of Birth:</strong> ${user.dob.date.split('T')[0]}</p>
             <p><strong>Age:</strong> ${user.dob.age}</p>
             <p><strong>Phone Number:</strong> ${user.phone}</p>
-            <p><strong>Location:</strong> ${userLocation}</p>
+            <p><strong>Address:</strong> ${userLocation}</p>
             <p><strong>Time zone:</strong> GMT${user.location.timezone.offset} (${user.location.timezone.description})</p>
         </div>
         `;

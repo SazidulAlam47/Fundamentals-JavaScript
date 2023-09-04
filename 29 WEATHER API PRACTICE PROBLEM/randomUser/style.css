@@ -52,6 +52,15 @@ body, html {
   .headder input[type="submit"]:hover {
     background-color: #0056b3; /* Darker background color on hover */
   }
+
+  @media (max-width: 455px){
+    .headder input[type="text"]{
+      margin: auto;
+    }
+    .headder input[type="submit"]{
+      margin-top: 10px;
+    }
+  }
   
 
   
