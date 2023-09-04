@@ -2,7 +2,7 @@ async function loadUsers(numberOfUsers){
     const url = `https://randomuser.me/api/?results=${numberOfUsers}`;
     const response = await fetch(url);
     const data = await response.json();
-    
+ 
     displayUsers(data.results);
 }
 
@@ -19,7 +19,7 @@ function displayUsers(allUsers){
         </div>
         <div class="user-info">
             <h2>${userName}</h2>
-            <p>male</p>
+            <p>${user.gender}</p>
             <p><strong>Email:</strong> ${user.email}</p>
             <p><strong>Date of Birth:</strong> ${user.dob.date.split('T')[0]}</p>
             <p><strong>Age:</strong> ${user.dob.age}</p>
