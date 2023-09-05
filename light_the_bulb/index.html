@@ -26,11 +26,15 @@
     onBtn.addEventListener("click", function(){
         document.getElementById('myImage').src='pic_bulbon.gif';
         battiOnAudio.play();
+        battiOffAudio.pause();
+        battiOffAudio.currentTime = 0;
     });
     
     offBtn.addEventListener("click", function(){
         document.getElementById('myImage').src='pic_bulboff.gif';
         battiOffAudio.play();
+        battiOnAudio.pause();
+        battiOnAudio.currentTime = 0;
     });
     
 </script>
