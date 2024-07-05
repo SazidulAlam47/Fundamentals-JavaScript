@@ -1,4 +1,0 @@
-# learnig-js
-
-- someting
-- anything
